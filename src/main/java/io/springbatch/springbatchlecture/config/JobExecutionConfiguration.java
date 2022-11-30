@@ -54,4 +54,11 @@ public class JobExecutionConfiguration {
                 })
                 .build();
     }
+
+    @Bean
+    public Step step3() {
+        return stepBuilderFactory.get("step3")
+                .tasklet(new CustomTasklet())
+                .build();
+    }
 }
